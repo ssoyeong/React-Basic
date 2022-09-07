@@ -5,7 +5,21 @@ import TodoList from './components/TodoList';
 
 const App = () => {
   const [todos, setTodos] = useState([
-
+    {
+      id: 1,
+      text: 'VSCode의 환경체크하기',
+      checked: true,
+    },
+    {
+      id: 2,
+      text: '도커이미지 생성 및 배포하기',
+      checked: true,
+    },
+    {
+      id: 3,
+      text: '코드의 생산성 높이기 훈련',
+      checked: false,
+    },
   ]);
 
   const nextId = useRef(4);
