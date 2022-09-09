@@ -7,6 +7,7 @@ import {
 import styled from "styled-components";
 // Pages
 import MainPage from './component/page/MainPage';
+import PostWritePage from "./component/page/PostWritePage";
 
 const MainTitleText = styled.p`
   font-size: 24px;
@@ -20,6 +21,7 @@ function App() {
     <MainTitleText>Kakao Academy of Gachon Univ.</MainTitleText>
     <Routes>
       <Route index element={<MainPage />} />
+      <Route path="post-write" element={<PostWritePage />} />
     </Routes>
     </BrowserRouter>
   );
