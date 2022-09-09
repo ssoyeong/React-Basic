@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 `;
 
 function PostList(props) {
+    
     const {posts, onClickItem} = props;
     console.log(posts);
     return (
@@ -27,6 +28,8 @@ function PostList(props) {
                         post={post}
                         onClick={() => {
                             onClickItem(post);
+                            // post를 넣어주면 post.id 링크로 이동
+                            // 왜냐면 Mainpaged에서 onClickItem 선언 시 post/${props.id}로 이동하라고 명시됨
                         }}
                     />
                 );

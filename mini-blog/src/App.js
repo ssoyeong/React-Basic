@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -8,6 +8,7 @@ import styled from "styled-components";
 // Pages
 import MainPage from './component/page/MainPage';
 import PostWritePage from "./component/page/PostWritePage";
+import data from './data.json'
 
 const MainTitleText = styled.p`
   font-size: 24px;
@@ -16,6 +17,12 @@ const MainTitleText = styled.p`
 `;
 
 function App() {
+
+  localStorage.setItem('user', JSON.stringify(data));
+  useEffect(() => {
+    localStorage.setItem('user', JSON.stringify(data))
+  }, []);
+
   return (
     <BrowserRouter>
     <MainTitleText>Kakao Academy of Gachon Univ.</MainTitleText>

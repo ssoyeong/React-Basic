@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 import styled from "styled-components";
 import Button from "../ui/Button";
 import PostList from "../list/PostList"
-import data from "../../data.json"
+// import data from "../../data.json"
 
 const Wrapper = styled.div`
     padding: 16px;
@@ -28,6 +28,7 @@ const Container = styled.div`
 function MainPage(props) {
 
     const navigate = useNavigate();
+    const jsonData = JSON.parse(localStorage.getItem('user'));
 
     return (
         <Wrapper>
@@ -40,7 +41,7 @@ function MainPage(props) {
                 />
 
                 <PostList
-                    posts={data}
+                    posts={jsonData}
                     onClickItem={(item) => {
                         navigate(`/post/${item.id}`);
                     }}

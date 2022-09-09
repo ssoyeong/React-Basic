@@ -26,9 +26,26 @@ const Container = styled.div`
 
 function PostWritePage(props) {
     const navigate = useNavigate();
+    const data = JSON.parse(localStorage.getItem('user'));
+    console.log('PostWritePage 렌더링');
+    console.log(data);
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
+
+    // 불러온 json에 새로 작성한 글의 데이터를 추가하는 함수
+    const writePost = ({title, content}) => {
+        data.push(
+            {
+                id: data[data.length-1].id + 1,
+                title: title,
+                content: content,
+                comments: []
+            }
+        );
+
+        localStorage.setItem('user', JSON.stringify(data));
+    }
 
     return (
         <Wrapper>
@@ -45,13 +62,14 @@ function PostWritePage(props) {
                     height={480}
                     value={content}
                     onChange={(event) => {
-                        setTitle(event.target.value);
+                        setContent(event.target.value);
                     }}
                 />   
 
                 <Button
                     title="글 작성하기"
                     onClick={() => {
+                        writePost({title, content});
                         navigate("/");
                     }}
                 />
