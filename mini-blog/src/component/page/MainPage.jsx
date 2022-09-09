@@ -1,6 +1,7 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import styled from "styled-components";
+import Button from "../ui/Button";
 
 const Wrapper = styled.div`
     padding: 16px;
@@ -29,7 +30,12 @@ function MainPage(props) {
     return (
         <Wrapper>
             <Container>
-                
+                <Button
+                    title="글 작성하기"
+                    onClick={() => {
+                        navigate("/post-write");
+                    }}
+                />
             </Container>
         </Wrapper>
     )

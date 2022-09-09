@@ -5,6 +5,8 @@ import {
   Route
 } from "react-router-dom";
 import styled from "styled-components";
+// Pages
+import MainPage from './component/page/MainPage';
 
 const MainTitleText = styled.p`
   font-size: 24px;
@@ -17,7 +19,7 @@ function App() {
     <BrowserRouter>
     <MainTitleText>Kakao Academy of Gachon Univ.</MainTitleText>
     <Routes>
-
+      <Route index element={<MainPage />} />
     </Routes>
     </BrowserRouter>
   );
