@@ -2,6 +2,8 @@ import React from "react";
 import {useNavigate} from "react-router-dom";
 import styled from "styled-components";
 import Button from "../ui/Button";
+import PostList from "../list/PostList"
+import data from "../../data.json"
 
 const Wrapper = styled.div`
     padding: 16px;
@@ -36,9 +38,16 @@ function MainPage(props) {
                         navigate("/post-write");
                     }}
                 />
+
+                <PostList
+                    posts={data}
+                    onClickItem={(item) => {
+                        navigate(`/post/${item.id}`);
+                    }}
+                />
             </Container>
         </Wrapper>
-    )
+    );
 }
 
 export default MainPage;
