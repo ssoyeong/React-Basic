@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PostListItem from "./PostListItem";
 
 const Wrapper = styled.div`
     display: flex;
@@ -19,7 +20,17 @@ function PostList(props) {
     console.log(posts);
     return (
         <Wrapper>
-    
+            {posts.map((post, index) => {
+                return (
+                    <PostListItem
+                        key={post.id}
+                        post={post}
+                        onClick={() => {
+                            onClickItem(post);
+                        }}
+                    />
+                );
+            })}
         </Wrapper>
     );
 }
