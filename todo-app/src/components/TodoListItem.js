@@ -7,6 +7,7 @@ import {
 import cn from 'classnames'
 import './TodoListItem.scss';
 
+// todolist로 받은 props를 이용하여 element 생성 및 함수 이용
 const TodoListItem = ({todo, onRemove, onToggle}) => {
     const {id, text, checked} = todo;
     console.log(todo);
