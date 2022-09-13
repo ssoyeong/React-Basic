@@ -2,18 +2,23 @@ import React, {useState, useRef, useEffect} from 'react';
 
 const App = () => {
 
-  const [count, setCount] = useState(1);
-  const renderCount = useRef(0);
+  const inputRef = useRef();
 
   useEffect(() => {
-    renderCount.current = renderCount.current + 1;  // ref는 rerendering을 발생시키지 않음
-    console.log("렌더링 수: ", renderCount.current);
-  });
+    // console.log(inputRef);
+    inputRef.current.focus();   // 로그인 텍스트인풋에 자동으로 focus
+  }, []);
+  
+  const login = () => {
+    alert(`Welcome ! ${inputRef.current.value}`);
+    inputRef.current.focus();
+
+  }
 
   return (
     <div>
-      <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>올려주세용</button>
+      <input ref={inputRef} type="text" placeholder="username" />
+      <button onClick={login}>로그인</button>
     </div>
   );
 };
