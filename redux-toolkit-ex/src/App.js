@@ -1,7 +1,10 @@
+import React from 'react';
+import User from './modules/User';
+
 function App() {
   return (
-    <div>
-    Redux Toolkit Exercise
+    <div className="App">
+      <User />
     </div>
   );
 }
