@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import CounterContainer from './containers/CounterContainer';
 
 function App() {
   return (
     <div className="App">
-      redux-count-todos-app
+      <CounterContainer />
     </div>
   );
 }
