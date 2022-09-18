@@ -1,9 +1,12 @@
 import './App.css';
+import UsersContainer from './containers/UsersContainer';
 
 function App() {
   return (
-    <div className="App">
-      Redux 활용 유저정보시스템 구현하기 !!
+    <div>
+      <h1>React-redux Attendance</h1>
+      <hr/>
+      <UsersContainer />
     </div>
   );
 }
