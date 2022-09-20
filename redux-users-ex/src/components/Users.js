@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import BasicModal from './BasicModal';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Table from '@mui/material/Table';
@@ -22,6 +23,7 @@ const UserList = React.memo(function UserList({users, onToggle, onRemove}) {
             <TableCell align="right">Name</TableCell>
             <TableCell align="right">Toggle</TableCell>
             <TableCell align="right">Remove</TableCell>
+            <TableCell align="right">PopUp</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -39,6 +41,9 @@ const UserList = React.memo(function UserList({users, onToggle, onRemove}) {
               </TableCell>
               <TableCell align="right">
                 <Button variant="contained" size="small" onClick={() => (onRemove(user.id))}>삭제</Button>
+              </TableCell>
+              <TableCell align="right">
+                <BasicModal />
               </TableCell>
             </TableRow>
           ))}
