@@ -1,24 +1,16 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import Script from 'next/script';
 
 export default function Mypage() {
     return (
-        <>
+        <div>
             <Head>
-                <title>전소영님의 페이지</title>
-                <Script
-                    src="https://connect.facebook.net/en_US/sdk.js"
-                    strategy="laxyOnload"
-                    onLoad={() =>
-                        console.log(`script loaded correctly, ...`)
-                    }
-                />
+                <title>마이페이지</title>
             </Head>
             <h4>
-                <Link href="/">Back to home</Link>
+                <Link href="/">홈으로 돌아가기</Link>
             </h4>
-            <h1>This my Mypage</h1>
-        </>
+            <h1>마이페이지입니다.</h1>
+        </div>
     );
 }
