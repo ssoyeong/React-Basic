@@ -2,6 +2,7 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Link from 'next/link';
 
 export default function SupportMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -39,7 +40,11 @@ export default function SupportMenu() {
           horizontal: 'left',
         }}
       >
-        <MenuItem onClick={handleClose}>공지사항</MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href={`/posts/support/notice`}>
+          <a>공지사항</a>
+          </Link>
+        </MenuItem>
         <MenuItem onClick={handleClose}>FAQ</MenuItem>
         <MenuItem onClick={handleClose}>1:1 문의</MenuItem>
       </Menu>
