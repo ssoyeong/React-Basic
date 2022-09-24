@@ -1,12 +1,17 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import SupportMenu from '../components/supportMenu';
+import SupportMenu from '../components/support/supportMenu';
 
 export default function Home() {
   return (
     <div> 
       <Head>
+        <title>Form Duo</title>
+        <meta name="description" content="설문조사 플랫폼, 폼듀" />
+      </Head>
+
+      <main>
         <Image
           priority
           src="/../public/images/header.jpg"
@@ -14,9 +19,6 @@ export default function Home() {
           width={1680}
           alt=""
         />
-      </Head>
-
-      <main>
         <h1>Form Duo 홈 화면입니다.</h1>
         <h4 className='title'>
           <Link href="/posts/mypage">마이페이지로 가기</Link>
