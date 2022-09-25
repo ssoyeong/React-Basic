@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Stack } from '@mui/material';
 import Link from 'next/link';
 import SupportMenu from './supportMenu';
+import ResponsiveAppBar from './appBar';
 
 export default function Header() {
 
@@ -13,7 +14,7 @@ export default function Header() {
         //   width={1680}
         //   alt=""
         // />
-
+        <div>
         <Stack direction="row" spacing={7} alignItems="center">
             <h6 className='title'>
                 <Link href="/posts/mypage"> </Link>
@@ -35,6 +36,8 @@ export default function Header() {
             </h6>
             <SupportMenu />
         </Stack>
+        <ResponsiveAppBar />
+        </div>
 
     );
 }
