@@ -25,9 +25,6 @@ export default function Notice({ allPostsData }) {
             <Head>
                 <title>공지사항</title>
             </Head>
-            <h4>
-                <Link href="/">홈으로 돌아가기</Link>
-            </h4>
             <h1>공지사항 페이지입니다.</h1>
             <div>
                 <Stack direction="row" spacing={2}>

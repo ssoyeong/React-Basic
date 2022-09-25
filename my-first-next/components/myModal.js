@@ -26,7 +26,7 @@ const style = {
 
     return (
         <React.Fragment>
-            <Button variant="contained" size="small" onClick={handleOpen}>자식 모달 열기</Button>
+            <Button variant="contained" size="small" onClick={handleOpen}>자식 팝업 열기</Button>
             <Modal
                 hideBackdrop
                 open={open}
@@ -38,9 +38,9 @@ const style = {
                         자식 팝업입니다.
                     </Typography>
                     <Typography id="child-modal-description" sx={{ mt: 2 }}>
-                        안녕하세요, 자식 팝업 내용입니다. 블라블라블라블라
+                        안녕하세요, 자식 팝업 내용입니다.
                     </Typography>
-                    <Button variant="contained" size="small" onClick={handleClose}>자식 모달 닫기</Button>
+                    <Button variant="contained" size="small" onClick={handleClose}>자식 팝업 닫기</Button>
                 </Box>
             </Modal>
         </React.Fragment>
@@ -66,10 +66,10 @@ export default function MyModal() {
                         부모 팝업입니다.
                     </Typography>
                     <Typography id="parent-modal-description" sx={{ mt: 2 }}>
-                        안녕하세요, 부모 팝업 내용입니다. 블라블라블라블라
+                        안녕하세요, 부모 팝업 내용입니다.
                     </Typography>
                     <ChildModal />
-                    <Button variant="contained" size="small" onClick={handleClose}>부모 모달 닫기</Button>
+                    <Button variant="contained" size="small" onClick={handleClose}>부모 팝업 닫기</Button>
                 </Box>
             </Modal>
         </div>

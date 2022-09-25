@@ -3,6 +3,8 @@ import { getAllPostIds, getPostData } from "../../../../lib/posts";
 import Head from 'next/head';
 import Date from "../../../../components/date";
 import utilStyles from '../../../../styles/utils.module.css'
+import Link from "next/link";
+import { Button } from "@mui/material";
 
 export default function Post({ postData }) {
   return (
@@ -10,6 +12,11 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
+      <h6 className='title'>
+            <Link href="/posts/support/notice">
+              <Button variant="contained" size="small">목록</Button>
+            </Link>
+      </h6>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
