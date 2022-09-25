@@ -22,8 +22,9 @@ export default function SupportMenu() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
+        size="small"
       >
-        고객지원
+        <h5 className='title'>고객지원</h5>
       </Button>
       <Menu
         id="demo-positioned-menu"
@@ -45,8 +46,16 @@ export default function SupportMenu() {
           <a>공지사항</a>
           </Link>
         </MenuItem>
-        <MenuItem onClick={handleClose}>FAQ</MenuItem>
-        <MenuItem onClick={handleClose}>1:1 문의</MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href={`/posts/mypage`}>
+          <a>FAQ</a>
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href={`/posts/mypage`}>
+          <a>1:1 문의</a>
+          </Link>
+        </MenuItem>
       </Menu>
     </div>
   );
