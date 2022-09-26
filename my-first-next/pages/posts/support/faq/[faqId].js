@@ -1,5 +1,5 @@
 import Layout from "../../../../components/layout";
-import { getAllPostIds, getPostData } from "../../../../lib/loadNotices";
+import { getAllPostIds, getPostData } from "../../../../lib/loadFaqs";
 import Head from 'next/head';
 import Date from "../../../../components/date";
 import utilStyles from '../../../../styles/utils.module.css'
@@ -13,7 +13,7 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <h6 className='title'>
-            <Link href="/posts/support/notice">
+            <Link href="/posts/support/faq">
               <Button variant="contained" size="small">목록</Button>
             </Link>
       </h6>
@@ -34,16 +34,16 @@ export async function getStaticPaths() {
   
   return {
     paths: [
-      {params: {noticeId: '1'}},
-      {params: {noticeId: '2'}},
-      {params: {noticeId: '3'}}
+      {params: {faqId: '1'}},
+      {params: {faqId: '2'}},
+      {params: {faqId: '3'}}
     ],
     fallback: false
   }
 }
 
 export async function getStaticProps({ params }) {
-    const postData = await getPostData(params.noticeId);
+    const postData = await getPostData(params.faqId);
     return {
         props: {
             postData,

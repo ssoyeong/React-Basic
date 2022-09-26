@@ -47,7 +47,7 @@ export default function SupportMenu() {
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link href={`/posts/mypage`}>
+          <Link href={`/posts/support/faq`}>
           <a>FAQ</a>
           </Link>
         </MenuItem>

@@ -15,7 +15,7 @@ export default function Header() {
         //   alt=""
         // />
         <div>
-        <Stack direction="row" spacing={7} alignItems="center">
+        {/* <Stack direction="row" spacing={7} alignItems="center">
             <h6 className='title'>
                 <Link href="/posts/mypage"> </Link>
             </h6>
@@ -35,8 +35,9 @@ export default function Header() {
                 <Link href="/posts/mypage">설문 분석</Link>
             </h6>
             <SupportMenu />
-        </Stack>
+        </Stack> */}
         <ResponsiveAppBar />
+        <SupportMenu />
         </div>
 
     );
