@@ -39,7 +39,13 @@ export default function Header() {
         <ResponsiveAppBar />
         <Stack direction="row" spacing={2} alignItems="center">
             <h6 className='title'>
-                <Link href="/posts/survey/result/surveyId">결과 분석</Link>
+                {/* <Link href="/posts/survey/result/[userId]/surveyId">결과 분석</Link> */}
+                <Link
+                    href={{
+                        pathname: '/posts/survey/result/[userId]/surveyId',
+                        query: {userId : 'userId'},
+                    }}
+                >결과 분석</Link>
             </h6>
         <SupportMenu />
         </Stack>

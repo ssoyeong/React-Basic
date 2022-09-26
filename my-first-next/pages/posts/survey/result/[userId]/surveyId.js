@@ -1,9 +1,13 @@
+import { useRouter } from 'next/router'
 import { useState } from 'react';
 import { Button } from '@mui/material';
-import Charts from '../../../../components/chart/charts';
-import PieChart from '../../../../components/chart/pieChart';
+import Charts from '../../../../../components/chart/charts';
+import PieChart from '../../../../../components/chart/pieChart';
 
 export default function SurveyId() {
+
+    const router = useRouter();
+    const { userId } = router.query;
 
     const [viewChart, setViewChart] = useState(true);
 
@@ -17,7 +21,7 @@ export default function SurveyId() {
                 <Button onClick={() => setViewChart(false)}>개별 응답 조회</Button>
             </div>
             <div>
-                {viewChart ? <Charts /> : <PieChart />}
+                {viewChart ? <Charts /> : <h2>개별 응답 조회 페이지입니다.</h2>}
             </div>
         </div>
     );
