@@ -37,7 +37,12 @@ export default function Header() {
             <SupportMenu />
         </Stack> */}
         <ResponsiveAppBar />
+        <Stack direction="row" spacing={2} alignItems="center">
+            <h6 className='title'>
+                <Link href="/posts/survey/result/surveyId">결과 분석</Link>
+            </h6>
         <SupportMenu />
+        </Stack>
         </div>
 
     );
