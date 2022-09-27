@@ -51,11 +51,6 @@ export default function SupportMenu() {
           <a>FAQ</a>
           </Link>
         </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link href={`/posts/mypage`}>
-          <a>1:1 문의</a>
-          </Link>
-        </MenuItem>
       </Menu>
     </div>
   );

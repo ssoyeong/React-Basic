@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material';
 import Link from 'next/link';
-import SupportMenu from './supportMenu';
+import SupportMenu from './support/supportMenu';
 
 export default function Header() {
 
