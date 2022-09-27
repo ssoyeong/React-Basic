@@ -21,7 +21,7 @@ export default function SurveyId() {
                 <Button onClick={() => setViewChart(false)}>개별 응답 조회</Button>
             </div>
             <div>
-                {viewChart ? <Charts /> : <h2>개별 응답 조회 페이지입니다.</h2>}
+                {viewChart ? <Charts props="getSurveyAnalysis"/> : <h2>개별 응답 조회 페이지입니다.</h2>}
             </div>
         </div>
     );
