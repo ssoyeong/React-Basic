@@ -1,13 +1,13 @@
 import * as React from 'react';
 import Search from './search';
 import utilStyles from '../../styles/utils.module.css';
-import Date from '../../components/date';
+import Date from './date';
 import PaginationBtn from './paginationBtn';
 import Link from 'next/link';
 import { Grid } from '@mui/material';
 
 export default function SupportContent({ pageName, allPostsData }) {
-
+    
     return (
         <div>
             <div>

@@ -2,8 +2,15 @@ import { useState } from 'react';
 import { Button } from '@mui/material';
 import DataAnalysis from '../../../../components/analysis/dataAnalysis';
 import EachResponse from '../../../../components/analysis/eachRespose';
+import { useRouter } from 'next/router';
 
 export default function SurveyId() {
+
+    const router = useRouter();
+    const { surveyId } = router.query;
+    const { message } = router.query;
+    console.log(message + " " + surveyId);
+    // alert(message + " " + surveyId);
 
     const [viewChart, setViewChart] = useState(true);
 
@@ -20,7 +27,7 @@ export default function SurveyId() {
                 )}
             </div>
             <div>
-                {viewChart ? <DataAnalysis /> : <EachResponse />}
+                {viewChart ? <DataAnalysis message="getDataAnaylsis"/> : <EachResponse message="getEachResponse" />}
             </div>
         </div>
     );

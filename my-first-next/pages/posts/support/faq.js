@@ -13,17 +13,21 @@ export async function getStaticProps() {
   };
 }
 
-export default function Faq({allPostsData}) {
+export default function Faq({ allPostsData }) {
 
-    const router = useRouter();
-    const pageName = router.pathname.split("/").pop();
+  const router = useRouter();
+  const { message } = router.query;
+  // alert(message);
+  console.log(message);
 
-    return (
-        <div>
-            <Head>
-                <title>FAQ</title>
-            </Head>
-            <SupportContent pageName={pageName} allPostsData={allPostsData}/>
-        </div>
-    );
+  const pageName = router.pathname.split("/").pop();
+
+  return (
+    <div>
+      <Head>
+        <title>FAQ</title>
+      </Head>
+      <SupportContent pageName={pageName} allPostsData={allPostsData} />
+    </div>
+  );
 }

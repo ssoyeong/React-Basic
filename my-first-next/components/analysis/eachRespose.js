@@ -1,7 +1,9 @@
 import { Grid } from "@mui/material";
 import PaginationBtn from "../support/paginationBtn";
 
-export default function EachResponse() {
+export default function EachResponse(props) {
+
+    console.log(props);
 
     return (
         <>

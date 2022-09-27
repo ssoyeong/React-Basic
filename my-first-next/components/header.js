@@ -9,7 +9,13 @@ export default function Header() {
             <Grid container spacing={2}>
                 <Grid item xs={2}>
                     <h5 className='title'>
-                        <Link href="/">홈</Link>
+                        {/* <Link href="/">홈</Link> */}
+                        <Link
+                            href={{
+                                pathname: '/',
+                                query: { message: 'moveToHome' },
+                            }}
+                        >홈</Link>
                     </h5>
                 </Grid>
                 <Grid item xs={2}>
@@ -32,7 +38,7 @@ export default function Header() {
                         <Link
                             href={{
                                 pathname: '/posts/survey/result/[surveyId]',
-                                query: { surveyId: 'surveyId' },
+                                query: { surveyId: 'survey01', message: 'getSurveyAnalysis' },
                             }}
                         >설문 분석</Link>
                     </h5>

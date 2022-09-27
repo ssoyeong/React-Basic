@@ -1,4 +1,11 @@
+import { useRouter } from "next/router";
+
 export default function HomeContainer() {
+
+    const router = useRouter();
+    const { message } = router.query;
+    console.log(message);
+
     return (
         <div>
             <h1>Form Duo 홈 화면입니다.</h1>

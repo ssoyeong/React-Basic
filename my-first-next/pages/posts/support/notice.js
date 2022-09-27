@@ -17,6 +17,10 @@ export async function getStaticProps() {
 export default function Notice({allPostsData}) {
 
     const router = useRouter();
+    const { message } = router.query;
+    // alert(message);
+    console.log(message);
+
     const pageName = router.pathname.split("/").pop();
 
     return (

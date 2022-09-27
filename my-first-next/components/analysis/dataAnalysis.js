@@ -3,7 +3,9 @@ import BarChart from './barChart';
 import PieChart from './pieChart';
 import Chart from './chart';
 
-export default function DataAnalysis() {
+export default function DataAnalysis(props) {
+
+    console.log(props);
 
     // const chartTypes = ['bar', 'pie', 'line', 'scatterplot'];
 
@@ -22,7 +24,7 @@ export default function DataAnalysis() {
                 justifyContent="center"
             >
                 <Grid item xs={3}>
-                    <Button variant="contained">응답 분석 결과 다운로드</Button>
+                    <Button variant="contained" onClick={() => console.log("downloadDataAnalysis")}>응답 분석 결과 다운로드</Button>
                 </Grid>
             </Grid>
         </div>

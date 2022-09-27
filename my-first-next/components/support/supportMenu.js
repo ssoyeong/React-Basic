@@ -42,14 +42,23 @@ export default function SupportMenu() {
         }}
       >
         <MenuItem onClick={handleClose}>
-          <Link href={`/posts/support/notice`}>
-          <a>공지사항</a>
-          </Link>
+          <Link
+            href={{
+              pathname: '/posts/support/notice',
+              query: { message: 'getNotification' },
+            }}
+          >공지사항</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link href={`/posts/support/faq`}>
-          <a>FAQ</a>
-          </Link>
+          {/* <Link href={`/posts/support/faq`}>
+            <a>FAQ</a>
+          </Link> */}
+          <Link
+            href={{
+              pathname: '/posts/support/faq',
+              query: { message: 'getFAQ' },
+            }}
+          >FAQ</Link>
         </MenuItem>
       </Menu>
     </div>
