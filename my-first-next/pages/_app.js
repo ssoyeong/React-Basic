@@ -20,7 +20,12 @@ export default function App({ Component, pageProps }) {
             align-items: right;
           }
         `}</style>
-        <Chatbot />
+        <div style={{
+          position: "fixed",
+          top: "600px",
+        }}>
+          <Chatbot />
+        </div>
       </div>
     </Layout>
   );
