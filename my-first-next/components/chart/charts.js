@@ -4,7 +4,7 @@ import PieChart from './pieChart';
 
 export default function Charts({props}) {
     console.log(props);
-    alert(props);
+
     return (
         <div>
             <div>

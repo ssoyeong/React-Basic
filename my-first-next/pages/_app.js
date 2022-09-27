@@ -1,7 +1,7 @@
 import '../styles/globals.css'
-import Header from '../components/header'
+import Layout from '../components/layout';
 import Chatbot from '../components/chatbot'
-import { useEffect, useState, useCallback } from 'react';
+import { useCallback } from 'react';
 
 export default function App({ Component, pageProps }) {
 
@@ -10,12 +10,18 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <div>
-      <Header />
+    <Layout>
       <Component {...pageProps} />
-      <div onClick={scrollToTop}>
-          <Chatbot />
-       </div>
-    </div>
+      <div className='container' onClick={scrollToTop}>
+        <style jsx>{`
+          .container {
+            display: flex;
+            justify-content: right;
+            align-items: right;
+          }
+        `}</style>
+        <Chatbot />
+      </div>
+    </Layout>
   );
 }

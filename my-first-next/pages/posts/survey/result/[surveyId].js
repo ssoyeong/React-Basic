@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react';
 import { Button } from '@mui/material';
-import Charts from '../../../../../components/chart/charts';
-import PieChart from '../../../../../components/chart/pieChart';
+import Charts from '../../../../components/chart/charts';
+import PieChart from '../../../../components/chart/pieChart';
 
 export default function SurveyId() {
 

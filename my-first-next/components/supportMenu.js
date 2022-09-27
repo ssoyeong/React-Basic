@@ -24,7 +24,7 @@ export default function SupportMenu() {
         onClick={handleClick}
         size="small"
       >
-        <h5 className='title'>고객지원</h5>
+        <h4 className='title'>고객지원</h4>
       </Button>
       <Menu
         id="demo-positioned-menu"

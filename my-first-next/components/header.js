@@ -1,55 +1,47 @@
-import Image from 'next/image';
-import { Stack } from '@mui/material';
+import { Grid } from '@mui/material';
 import Link from 'next/link';
 import SupportMenu from './supportMenu';
-import ResponsiveAppBar from './appBar';
 
 export default function Header() {
 
     return (
-        // <Image
-        //   priority
-        //   src="/../public/images/header.jpg"
-        //   height={261}
-        //   width={1680}
-        //   alt=""
-        // />
         <div>
-        {/* <Stack direction="row" spacing={7} alignItems="center">
-            <h6 className='title'>
-                <Link href="/posts/mypage"> </Link>
-            </h6>
-            <h6 className='title'>
-                <Link href="/">홈</Link>
-            </h6>
-            <h6 className='title'>
-                <Link href="/posts/mypage">폼듀란?</Link>
-            </h6>
-            <h6 className='title'>
-                <Link href="/posts/mypage">설문 목록</Link>
-            </h6>
-            <h6 className='title'>
-                <Link href="/posts/mypage">설문 제작</Link>
-            </h6>
-            <h6 className='title'>
-                <Link href="/posts/mypage">설문 분석</Link>
-            </h6>
-            <SupportMenu />
-        </Stack> */}
-        <ResponsiveAppBar />
-        <Stack direction="row" spacing={2} alignItems="center">
-            <h6 className='title'>
-                {/* <Link href="/posts/survey/result/[userId]/surveyId">결과 분석</Link> */}
-                <Link
-                    href={{
-                        pathname: '/posts/survey/result/[userId]/surveyId',
-                        query: {userId : 'userId'},
-                    }}
-                >결과 분석</Link>
-            </h6>
-        <SupportMenu />
-        </Stack>
+            <Grid container spacing={2}>
+                <Grid item xs={2}>
+                    <h5 className='title'>
+                        <Link href="/">홈</Link>
+                    </h5>
+                </Grid>
+                <Grid item xs={2}>
+                    <h5 className='title'>
+                        <Link href="/">"폼듀"란?</Link>
+                    </h5>
+                </Grid>
+                <Grid item xs={2}>
+                    <h5 className='title'>
+                        <Link href="/">설문 목록</Link>
+                    </h5>
+                </Grid>
+                <Grid item xs={2}>
+                    <h5 className='title'>
+                        <Link href="/">설문 제작</Link>
+                    </h5>
+                </Grid>
+                <Grid item xs={2}>
+                    <h5 className='title'>
+                        <Link
+                            href={{
+                                pathname: '/posts/survey/result/[surveyId]',
+                                query: { surveyId: 'surveyId' },
+                            }}
+                        >설문 분석</Link>
+                    </h5>
+                </Grid>
+                <Grid item xs={2}>
+                    <SupportMenu />
+                </Grid>
+            </Grid>
+            <hr />
         </div>
-
     );
 }
