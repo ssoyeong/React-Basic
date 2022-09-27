@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import MyModal from '../../../components/myModal';
+import PaginationBtn from '../../../components/paginationBtn';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -50,7 +51,10 @@ export default function Notice({ allPostsData }) {
                     ))}
                 </ul>
             </section>
-            <MyModal />
+            {/* <MyModal /> */}
+            <div>
+                <PaginationBtn />
+            </div>
         </div>
     );
 }
